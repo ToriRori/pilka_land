@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  scroll-behavior: smooth;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary_color: #A763D9;
+  --accent_color:  #95d963;
+  --warn_color:    #6c63d9;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

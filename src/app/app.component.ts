@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
+  goToGithub(): void {
+    window.open('https://github.com/RoyalStorm/nails-tracker');
+  }
 }
