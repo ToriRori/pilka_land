@@ -1,56 +1,130 @@
-<nav id="nav-bar">
-  <ul>
-    <li><a href="#welcome-section">Main</a></li>
-    <li><a href="#about-team">Team</a></li>
-    <li><a href="#contacts">Contacts</a></li>
-  </ul>
-</nav>
+<div id="nav-area">
+  <img class="logo" src="assets/logo.png" alt="" width="40"/>
+  <!--<nav class="nav-bar">
+    <ul>
+      <li><a href="#welcome-section">Main</a></li>
+      <li><a href="#about-project">Project</a></li>
+      <li><a href="#about-team">Team</a></li>
+      &lt;!&ndash;<li><a href="#about-us">Good Things?</a></li>&ndash;&gt;
+      <li><a href="#contacts">Contacts</a></li>
+    </ul>
+  </nav>-->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" (click)="navbarCollapsed = !navbarCollapsed" [attr.aria-expanded]="!navbarCollapsed" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<div class="header video-box" id="welcome-section">
+    <div class="collapse navbar-collapse" [ngbCollapse]="navbarCollapsed" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class = nav-item><a href="#welcome-section">Main</a></li>
+        <li class = nav-item><a href="#about-project">Project</a></li>
+        <li class = nav-item><a href="#about-team">Team</a></li>
+        <!--&lt;!&ndash;<li><a href="#about-us">Good Things?</a></li>&ndash;&gt;-->
+        <li class = nav-item><a href="#contacts">Contacts</a></li>
+      </ul>
+    </div>
+  </nav>
+
+</div>
+
+<div class="video-box" id="welcome-section">
   <video class="video" loop="loop" autoplay="autoplay" preload="auto" muted="muted">
     <source src="../assets/video.mp4" type="video/mp4"/>
     <source src="../assets/video.webm" type="video/mp4"/>
   </video>
 </div>
 
-<div class="header page title">
-  <span><i aria-hidden="true" class="fa fa-heart"></i></span>
+<div class="header-video">
+<div class="header page">
   <h3>P I L K A</h3>
-  <p>New startup, blablabla</p>
-  <button id="nailcover" (click)="goToGithub()" class="btn">OUR PROJECT</button>
+  <p>Try on nail polish in AR with our web app</p>
+  <button id="nailcover" (click)="goToGithub()" class="btn">Go to Github</button>
+</div>
 </div>
 
-<div class="content page" id="about-team">
-  <div class="people">
-    <h2>НАША КОМАНДА</h2>
-    <div class="row card-menu">
+<div id="about-project" class="content page">
+  <h3>ABOUT PROJECT</h3>
+  <div>
+    <div class="row">
+      <div class="col-sm-5 content-box">
+        <div class="box-header">
+          <h2>Try on web app</h2>
+          <hr class="separator"/>
+        </div>
+        <img class="img-fluid" src="assets/neural.jpg"/>
+        <p>You can try on nail polishes with our app in realtime mode</p>
+      </div>
+      <div class="col-sm-5 content-box">
+        <div class="box-header">
+          <h2>Booking service</h2>
+          <hr class="separator"/>
+        </div>
+        <img class="img-fluid" src="assets/comingsoon.png"/>
+        <p>We are developing booking service for nail masters and their clients</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="separator-area">
+  <hr class="separator"/>
+</div>
+
+<div id="about-team" class="content page">
+  <h3>TEAM</h3>
+  <div>
+    <div class="row">
       <div class="col-sm-3 card-info">
         <img class="img-fluid face" src="../assets/vica.jpg">
         <div class="anchor">
-          <a href="#">Виктория Быстрова</a>
+          <a href="#">Viktoria Bystrova</a>
         </div>
-        <p>Активистка, пионерка и вообще чикуля</p>
+        <p>Project Manager</p>
       </div>
       <div class="col-sm-3 card-info">
         <img class="img-fluid face" src="../assets/roma.jpg">
         <div class="anchor">
-          <a href="#">Роман <br>Возный</a>
+          <a href="#">Roman Vozniy</a>
         </div>
-        <p>Молодечик, светлейший человечек</p>
+        <p>Backend</p>
       </div>
       <div class="col-sm-3 card-info">
         <img class="img-fluid face" src="../assets/yura.jpg">
         <div class="anchor">
-          <a href="#">Юрий <br>Колот</a>
+          <a href="#">Yurii Kolot</a>
         </div>
-        <p>Горец, за юность борец</p>
+        <p>Full Stack</p>
       </div>
       <div class="col-sm-3 card-info">
         <img class="img-fluid face" src="../assets/vlad.jpg">
         <div class="anchor">
-          <a href="#">Владислав Сильченко</a>
+          <a href="#">Vladislav Silchenko</a>
         </div>
-        <p>Хуй</p>
+        <p>DevOps</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+<div id="about-us" class="content page">
+  <hr class="separator"/>
+  <h2>ОТЗЫВЫ</h2>
+  <div class="row review-row">
+    <div class="col-sm-6 review">
+      <p>"Очень удобный сервис. Теперь нет проблем с записью к мастерам. А вы уже примеряли маникюр?"</p>
+      <div class="row-person">
+        <img src="../assets/girl1.jpg">
+        <a href="#">Анастасия Ли</a>
+      </div>
+    </div>
+
+    <div class="col-sm-6 review">
+      <p>"Хоспаде, спасибо, что создали такую возможность записываться к мастерам в любой момент где угодно! Храни вас бог!"</p>
+      <div class="row-person">
+        <img src="../assets/girl2.jpg">
+        <a href="#">Вероника Климова</a>
       </div>
     </div>
   </div>
@@ -106,36 +180,52 @@
         </div>
       </div>
     </div>
-
   </div>
-
-
+</div>
+-->
+<div class="separator-area">
+  <hr class="separator"/>
 </div>
 
 <div id="contacts" class="content page">
-  Как с нами связаться?
+  <h3>CONTACTS</h3>
+    <nav>
+      <ul class="nav-list">
+        <li #info_link class="fake-link" (click)="switchToForm()">Contact Info</li>
+        <li class="li-sep">|</li>
+        <li #contact_link class="fake-link" (click)="switchToInfo()">Contact Us</li>
+      </ul>
+    </nav>
+
+  <div>
+
+    <div id="contact-box" *ngIf="infoMode">
+      <div class="properties">
+        <p>Contact Person:</p>
+        <p>Telegram:</p>
+        <p>E-mail:</p>
+      </div>
+      <div class="values">
+        <p>Viktoria Bystrova</p>
+        <p>@ToriRori</p>
+        <p>torirorik@gmail.com</p>
+      </div>
+    </div>
+    <div id="form-box" *ngIf="!infoMode">
+      <form #form="ngForm" (ngSubmit)="onSubmit(); form.reset()">
+        <label id="name-label">Name</label><br>
+        <input (input)="name=$event.target.value" type="text" id="name" placeholder="Enter your name" required><br>
+        <label id="email-label">Email</label><br>
+        <input (input)="email=$event.target.value" type="email" id="email" placeholder="Enter your Email" required><br>
+        <label id="textarea-label">Message</label><br>
+        <textarea (input)="text=$event.target.value" id="textarea" rows="5"></textarea><br>
+        <div id="button_area">
+          <button type="submit" id="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
-
-
-
-
-<!--<div class="row review-row">
-  <div class="col-sm-6 review">
-    <p>"Очень удобный сервис. Теперь нет проблем с записью к мастерам. А вы уже примеряли маникюр?"</p>
-    <div class="row-person">
-      <img src="../assets/client1.jpg">
-      <a href="#">Анастасия Ли</a>
-    </div>
-  </div>
-
-  <div class="col-sm-6 review">
-    <p>"Хоспаде, спасибо, что создали такую возможность записываться к мастерам в любой момент где угодно! Храни вас бог!"</p>
-    <div class="row-person">
-      <img src="../assets/client2.jpg">
-      <a href="#">Вероника Климова</a>
-    </div>
-  </div>
-</div>-->
 
 <div class="footer">
   <p>© 2020 DedDoma</p>

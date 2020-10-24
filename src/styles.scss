@@ -9,10 +9,14 @@ html {
 }
 
 :root {
-  --primary_color: #A763D9;
+  --primary_color: #e396e0;
   --accent_color:  #95d963;
   --warn_color:    #6c63d9;
+  --nav-color: #ffffff
 }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
